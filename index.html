@@ -139,4 +139,15 @@ $('swatches').innerHTML=colors.map(c=>`<button class="swatch" data-color="${c}" 
 function deleteAccount(){if(confirm('このブラウザに保存されたアカウントと全データを削除します。本当によろしいですか？')){let a=accounts();delete a[current];saveAccounts(a);current=null;$('app').classList.add('hidden');$('auth').classList.remove('hidden');switchMode()}}
 function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 </script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+const SUPABASE_URL = "https://aoiiidao.github.io/study-palette-1/";
+const SUPABASE_PUBLISHABLE_KEY = "ここにPublishable keyを貼る";
+
+const supabase = window.supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_PUBLISHABLE_KEY
+);
+</script>
 </body></html>
