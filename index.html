@@ -40,7 +40,7 @@ canvas{width:100%;height:230px;display:block}
   <div class="field"><label>パスワード</label><input id="authPass" type="password" autocomplete="current-password" placeholder="パスワード"></div>
   <button id="authSubmit" style="width:100%;margin-top:8px">ログイン</button>
   <button id="authSwitch" class="ghost" style="width:100%;margin-top:9px">新しいアカウントを作成</button>
-  <p class="muted small" style="margin-top:15px">※この試作版のアカウントとデータは、このブラウザ内だけに保存されます。</p>
+  <p class="muted small" style="margin-top:15px">※アカウントとデータは、このブラウザ内だけに保存されます。</p>
   <p id="authMsg" class="small" role="status"></p>
  </div>
 </section>
@@ -149,5 +149,6 @@ const supabase = window.supabase.createClient(
   SUPABASE_URL,
   SUPABASE_PUBLISHABLE_KEY
 );
+ console.log("Supabase接続準備OK！");
 </script>
 </body></html>
